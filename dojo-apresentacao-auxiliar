@@ -1,0 +1,89 @@
+O que é blockchain?
+
+	É uma cadeia de blocos que registra alguma informação;
+
+	Descrita em 1991 por um grupo de pesquisadores e foi originalmente destinada a carimbo de data digital de documentos para que não seja possível retroceder ou manipula-los. Quase como um tabelião;
+
+Bitcoin
+	No entanto ele quase não foi utilizado até que fosse adaptado por Satoshi Nakamoto em 2009 para criar a moeda Bitcoin;
+
+Um blockchain é um livro razão distribuído que é completamente aberto a qualquer pessoa;
+
+O blockchain tem uma propriedade importante: uma vez que os dados foram gravados dentro de um blockchain torna-se dificil mudar isso.
+
+Como Funciona?
+Vamos dar uma olhada de perto em um bloco:
+Cada bloco contém algum dados, hash do bloco e o hash do bloco anterior
+
+Os dados armazenados em um bloco dependem do tipo de blockchain
+O blockchain do bitcoin por exemplo armazena detalhes sobre uma transação, como remetente, receptor e quantidade de moedas
+
+Um bloco também possui dados um hash
+Podemos comparar um hash a uma impressão digital
+Ele identifica um bloco e todo seu conteúdo é sempre único, assim como uma impressão digital
+Uma vez que o bloco é criado, seu hash será calculado
+Mudar algo dentro do bloco fará com que o hash mude
+Então, em outras palavras: hashes são muito úteis quando queremos detectar mudanças para bloquear
+se o hash de um bloco mudar, então ele deixará de ser o mesmo bloco
+
+O terceiro elemento dentro de um bloco é o hash do bloco anterior
+Isso cria efetivamente uma cadeia de blocos e é essa técnica que faz um blockchain tão seguro.
+Vamos a um exemplo: (descrição no slide)
+Ao final do exemplo: Mas o uso de hashes não é suficiente para previnir adulterações
+Os computadores nos dias de hoje são muito rápidos e podem calcular centenas de milhares de hashes por segundo.
+Poderiamos efetivamente manipular um bloco e recalcular todos os hashes dos blocos para tornar sua cadeia de blocos válida novamente.
+
+Proof-of-work
+Então para mitigar isso, o blockchain tem algo chamado Proof-of-work (Prova de Tralho - POW)
+É um mecanismo que desacelera a criação de novos blocos
+No caso do bitcoin, demora cerca de 10 minutos para calcular o proof-of-work (prova de trabalho) e adicionar um novo bloco na cadeia.
+Este mecanismo torna muito dificil a manipulação dos blocos, porque se voce manipular 1 bloco, voce precisará recalcular o proof-of-work para todos os blocos seguintes. Portanto a segurança de um blockchain vem do uso criativo do hashing e do mecanismo do proof-of-work.
+
+Não para por ai, temos mais um modo que garante a segurança de um blockchain, as cadeias de bloco são distribuidos usando uma rede.
+Em vez de usar uma central para gerenciar, o blockchain usa uma rede peer-to-peer e qualquer pessoa pode participar
+Quando alguém se junta a esta rede, ele recebe uma cópia completa do blockchain
+O nó pode usar isso para verificar se tudo ainda está em ordem
+do 
+Vamos ver o que acontece quando alguém cria um novo bloco
+Este bloco é enviado a toda na rede
+Cada nó então verifica o bloco criado para certificar que não tenha sio adulterado
+Se tudo der certo, cada nó adiciona este bloco a seu proprio blockchain 
+Todos os nós da rede cria um consenso. Ou seja, a rede concorda sobre quais blocos são validos e quais não são.
+Os blocos que foram adulterados serão rejeitados por outros nós da rede
+Então, para manipular com sucesso um blockchain, precisariamos manipular todos os blocos da cadeia, refazer o proof-of-work para cada bloco e assumir o controle de mais de 50% da rede peer-to-peer
+Só então o seu bloco adulterado será aceito por todos os outros
+Isso é quase impossível de fazer
+
+Os blockchains estão em envolução constante e um dos desenvolvimentos mais recentes é a criação dos contratos inteligentes
+
+
+Aplicabilidade
+Registros médicos
+Tabelião digital
+Cobrar Impostos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

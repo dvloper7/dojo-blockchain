@@ -9,7 +9,7 @@ class Block {
     }
 
     calcularHash() {
-        return SHA256(this.hashBlocoAnterior + this.timestamp + JSON.stringify(this.data)).toString();
+        return SHA256(this.hashBlocoAnterior + this.timestamp + JSON.stringify(this.dados)).toString();
     }
     
 }
@@ -20,7 +20,7 @@ class Blockchain {
     }
 
     criarBlocoGenesis() {
-        return new Block(0, "26/09/2018", "Bloco Genesis", "0");
+        return new Block("26/09/2018", "Bloco Genesis", "0");
     }
 
     obterUltimoBloco() {

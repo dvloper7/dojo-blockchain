@@ -6,8 +6,6 @@ class Transaction {
         this.enderecoDestinatario = enderecoDestinatario;
         this.valor = valor;
     }
-
-
 }
 
 class Block {
@@ -44,7 +42,7 @@ class Blockchain {
     }
 
     criarBlocoGenesis() {
-        return new Block(0, "26/09/2018", "Bloco Genesis", "0");
+        return new Block("26/09/2018", "Bloco Genesis", "0");
     }
 
     obterUltimoBloco() {
@@ -105,16 +103,16 @@ let enderecoDavide = "endereco-davide";
 
 hariDineshCoin.adicionarTransacao(new Transaction("endereco-joao", "endereco-maria", 100)); 
 hariDineshCoin.adicionarTransacao(new Transaction("endereco-maria", "endereco-joao", 150));
-//hariDineshCoin.adicionarTransacao(new Transaction("endereco-joao", enderecoDavide, 150));
+hariDineshCoin.adicionarTransacao(new Transaction("endereco-joao", enderecoDavide, 150));
 
 
 console.log("\nIniciando a mineração....");
 hariDineshCoin.minerarTransacoesPendentes(enderecoDavide);
-console.log("\Recompensa do Davide é: ", hariDineshCoin.obterRecomenpaMinerador(enderecoDavide));
+console.log("\nRecompensa do Davide é: ", hariDineshCoin.obterRecomenpaMinerador(enderecoDavide));
 
 
 console.log("\nIniciando nova mineração....");
 hariDineshCoin.minerarTransacoesPendentes(enderecoDavide);
-console.log("\Recompensa do Davide é: ", hariDineshCoin.obterRecomenpaMinerador(enderecoDavide));
+console.log("\nRecompensa do Davide é: ", hariDineshCoin.obterRecomenpaMinerador(enderecoDavide));
 
 console.log(hariDineshCoin.chain);

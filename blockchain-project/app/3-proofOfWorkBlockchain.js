@@ -32,11 +32,11 @@ class Block {
 class Blockchain {
     constructor() {
         this.chain = [this.criarBlocoGenesis()];
-        this.dificuldade = 2;
+        this.dificuldade = 6;
     }
 
     criarBlocoGenesis() {
-        return new Block(0, "26/09/2018", "Bloco Genesis", "0");
+        return new Block("26/09/2018", "Bloco Genesis", "0");
     }
 
     obterUltimoBloco() {
